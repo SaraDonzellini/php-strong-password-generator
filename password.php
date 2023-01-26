@@ -4,6 +4,11 @@ include_once __DIR__ . '/partials/functions.php';
 
 session_start();
 
+if(!empty($_SESSION['username'])) {
+
+  $_SESSION['userNumber'];
+}
+
 ?>
 
 
@@ -23,7 +28,7 @@ session_start();
       <div class="row">
         <div class="col-12">
           <p>
-            Ecco la tua nuova password: <?php echo randomPassword() ?>
+            Ecco la tua nuova password: <?php echo randomPassword()  ?>
           </p>
         </div>
       </div>

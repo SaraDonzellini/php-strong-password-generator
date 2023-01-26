@@ -5,10 +5,11 @@ include_once __DIR__ . '/partials/functions.php';
 session_start();
 
 if ( isset( $_GET["submitButton"] ) ) { 
-  // (deal with the submitted fields here) 
   header( "Location: password.php" ); 
   exit; 
-}
+};
+
+$_SESSION['userNumber']
 
 
 ?>
@@ -45,7 +46,7 @@ if ( isset( $_GET["submitButton"] ) ) {
             <button type="submit" name="submitButton">Invia</button>
           </form>
           <p>
-            Ecco la tua nuova password: <?php echo randomPassword() ?>
+            <!-- Ecco la tua nuova password: <?php echo randomPassword() ?> -->
           </p>
 
         </div>
