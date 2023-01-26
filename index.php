@@ -5,11 +5,11 @@ include_once __DIR__ . '/partials/functions.php';
 session_start();
 
 if (isset($_GET["submitButton"])) { 
+  $_SESSION['password'] = randomPassword($_GET['userNumber']);
   header("Location: password.php"); 
   exit; 
 };
 
-$_SESSION['userNumber'] = !empty($_GET['userNumber']);
 
 
 ?>
