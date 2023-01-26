@@ -2,7 +2,14 @@
 
 include_once __DIR__ . '/partials/functions.php';
 
-session_start()
+session_start();
+
+if ( isset( $_GET["submitButton"] ) ) { 
+  // (deal with the submitted fields here) 
+  header( "Location: password.php" ); 
+  exit; 
+}
+
 
 ?>
 
@@ -35,7 +42,7 @@ session_start()
           <form action="./index.php" method="GET">
             <label for="userNumber">Inserisci la lunghezza della password desiderata</label>
             <input type="number" name="userNumber" id="userNumber">
-            <button type="submit">Invia</button>
+            <button type="submit" name="submitButton">Invia</button>
           </form>
           <p>
             Ecco la tua nuova password: <?php echo randomPassword() ?>
